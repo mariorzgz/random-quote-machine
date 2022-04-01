@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+
 
 const getRandomQuote = (data) => {
   return(data.quotes[Math.floor(Math.random() * data.quotes.length)])
@@ -32,7 +36,9 @@ class QuoteBox extends React.Component {
 
   render() {
     return <div id="quote-box">
-      <div id="text"><i class="fa fa-quote-left"> </i>{this.state.quote}</div>
+      <div id="text">
+        <FontAwesomeIcon icon={faQuoteLeft} />{this.state.quote}
+      </div>
       <div id="author">By {this.state.author}</div>
       <button id ="new-quote" onClick={this.getQuote.bind(this)}>
         New Quote
@@ -42,6 +48,7 @@ class QuoteBox extends React.Component {
          data-size="large"
          target="_blank"
          rel="noreferrer">
+         <FontAwesomeIcon icon={faTwitter}/>
       Tweet
       </a>
     </div>;
