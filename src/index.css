@@ -13,6 +13,7 @@ code {
 }
 
 #root{
+  transition: background-color 0.2s;
   width: 100vw;
   height: 100vh;
   display: flex;
