@@ -32,7 +32,7 @@ class QuoteBox extends React.Component {
 
   render() {
     return <div id="quote-box">
-      <div id="text">"{this.state.quote}"</div>
+      <div id="text"><i class="fa fa-quote-left"> </i>{this.state.quote}</div>
       <div id="author">By {this.state.author}</div>
       <button id ="new-quote" onClick={this.getQuote.bind(this)}>
         New Quote
